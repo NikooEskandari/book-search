@@ -28,13 +28,14 @@ export default function BookSearch() {
         />
         <FontAwesomeIcon
           icon={faSearch}
+          data-testid="search-books"
           width="20px"
           onClick={(e) => handleClick()}
         />
       </div>
       <div className="sort-options">
-        <button onClick={(e) => sortDocs(e, "title")}>Sort Alphabetically</button>
-        <button onClick={(e) => sortDocs(e, "date")}>Sort by Recently Published</button>
+        <button onClick={(e) => sortDocs(e, "title")} data-testid="sort-alphabetically">Sort Alphabetically</button>
+        <button onClick={(e) => sortDocs(e, "date")} data-testid="sort-date">Sort by Recently Published</button>
       </div>
       <div className="search-result">
         {docs?.map((doc, index) => {
